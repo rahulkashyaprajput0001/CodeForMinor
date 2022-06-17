@@ -21,8 +21,9 @@ public class TenantForFlatMapTest {
         obj.phoneNumbers.add(1,Arrays.asList(1234456,656123456,765432,54565675,3423423,90897));
         List<List <Integer>> mNunber = obj.getPhoneNumbers();
         mNunber.stream().flatMap(n-> n.stream()).collect(Collectors.toList());
-    List<Integer>ls =     mNunber .stream().flatMap(pList -> pList.stream()).collect(Collectors.toList());
+        List<Integer>ls =     mNunber .stream().flatMap(pList -> pList.stream()).collect(Collectors.toList());
         System.out.println(ls);
+
 }
 }
 

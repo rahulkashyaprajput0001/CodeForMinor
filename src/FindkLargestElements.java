@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
 
 public class FindkLargestElements {
     public static void main(String[] args) {
-        int[] ar = {3,2,5,4,1,6,9,7};int k =6;
+        int[] ar = {3,2,5,4,1,6,9,7};int k =2;
         printKLargetsElements(ar,k);
         //System.out.println(minHeap);          
     }
@@ -29,7 +29,7 @@ public class FindkLargestElements {
                  minHeapQueue.poll();
                  minHeapQueue.add(ar[i]);
              }
-         }
+         } System.out.println("after any modifications" + minHeapQueue);
          System.out.println(minHeapQueue.peek());
         
     }

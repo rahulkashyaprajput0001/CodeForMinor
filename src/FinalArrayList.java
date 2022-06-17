@@ -11,6 +11,8 @@ public class FinalArrayList {
         list.add("pqr"); //allowed
         System.out.println(list);
          ArrayList<String> list2 = new ArrayList<>();
-        // list = list;
+         list1 = list;
+       //  list - list1
+        System.out.println(list1);
     }
 }

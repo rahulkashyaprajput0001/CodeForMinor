@@ -9,6 +9,7 @@ static LinkedList <Integer> list = new LinkedList<Integer>();
    static Object lock = new Object();
   static  AtomicInteger atomInt = new AtomicInteger(1);
 
+
     public static void main(String[] args) {
           Producer pro =  new Producer();
     Consumer con =  new Consumer();
@@ -26,14 +27,14 @@ static LinkedList <Integer> list = new LinkedList<Integer>();
         while(true){
         
         synchronized(lock){
-            if(list.size() == cap){
+            if(list.size() > 0){
                 try {
                     lock.wait();
                 } catch (InterruptedException ex) {
                     Logger.getLogger(ProduceConsumer.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }else{
-                if(list.size() != cap ){
+                if(list.size() < cap ){
             System.out.println("Producer" + atomInt.incrementAndGet());
                list.add(atomInt.incrementAndGet());
             lock.notifyAll();
