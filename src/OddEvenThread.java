@@ -58,7 +58,8 @@ public class OddEvenThread {
         Object lock;
         oddThread(AtomicInteger atom, Object lock){
             this.atom = atom;
-            this.lock = lock;   
+            this.lock = lock;
+
         }
         @Override
         public void run() {

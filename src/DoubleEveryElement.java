@@ -6,8 +6,9 @@ import java.util.stream.Stream;
 
 public class DoubleEveryElement {
     public static void main(String[] args) {
-        List<Integer> list = Arrays.asList(1,2,3,4,5);
+        List<Integer> list = Arrays.asList(1,2,3,4,5,5);
         list = list.stream().map(ele->ele*2).collect(Collectors.toList());
+                 list.stream().distinct().collect(Collectors.toList());
         list.forEach(ele->{
            System.out.println(ele);
        });

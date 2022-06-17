@@ -11,8 +11,8 @@ public class HaspMapWorkingWithNull {
         System.out.println( map.get(null));
         map.put(null, "secondNullfirstIndesx");
         System.out.println(map);
-         for (Map.Entry<Integer,String> entry : map.entrySet())  
-            System.out.println("Key = " + entry.getKey() + 
-                             ", Value = " + entry.getValue());
-    }
-}
+//         for (Map.Entry<Integer,String> entry : map.entrySet())
+//            System.out.println("Key = " + entry.getKey() +
+//                             ", Value = " + entry.getValue());
+//    }
+}}
